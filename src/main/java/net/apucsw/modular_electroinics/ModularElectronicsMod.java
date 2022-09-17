@@ -6,7 +6,7 @@
  *		This project is fully coded in IntelliJ IDEA.
  *
  */
-package net.apucsw.modular_electronics;
+package net.apucsw.modular_electroinics;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
