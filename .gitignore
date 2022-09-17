@@ -1,0 +1,32 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea/
+.settings/
+
+# gradle
+.gradle/
+build/
+build.gradle
+gradle.properties
+gradlew.bat
+
+# other
+eclipse/
+run/
+
+# MacOS system files
+.DS_STORE
+
+# Files from Forge MDK
+forge*changelog.txt

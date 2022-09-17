@@ -1,0 +1,8 @@
+{
+  "itemGroup.tab_modular_electronics": "모듈식 전자기기",
+  "key.categories.modular_electronics": "모듈식 전자기기",
+  "key.modular_electronics.show_description": "설명 보기",
+  "description.modular_electronics.tooltip.key.show_description": "§b%s §7키를 눌러 설명 보기",
+  "key.modular_electronics.show_detail_information": "세부 정보 보기",
+  "description.modular_electronics.tooltip.key.show_detail_information": "§b%s §7키를 눌러 세부 정보 보기"
+}

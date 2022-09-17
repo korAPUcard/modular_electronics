@@ -1,0 +1,8 @@
+{
+  "itemGroup.tab_modular_electronics": "Modular Electronics",
+  "key.categories.modular_electronics": "Modular Electronics",
+  "key.modular_electronics.show_description": "Show Description",
+  "description.modular_electronics.tooltip.key.show_description": "§7Hold §b%s §7for description.",
+  "key.modular_electronics.show_detail_information": "Show Detail Information",
+  "description.modular_electronics.tooltip.key.show_detail_information": "§7Hold §b%s §7for detail information."
+}
