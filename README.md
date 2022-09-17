@@ -14,7 +14,7 @@
 
 ### Description
 This MOD will add variable portable devices and stationary machines.   
-Most devices will required the power. Commonly used Forge Energy(FE).
+Most devices will require the power. Commonly used Forge Energy(FE).
 
 **It's still in development.**
 
