@@ -28,7 +28,7 @@ public class BasicModularSmartphoneItem extends Item {
     public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, world, list, flag);
         if (ModularElectronicsModKeyMappings.SHOW_DESCRIPTION.isDown()) {
-
+            list.add(new TranslatableComponent("description.modular_electronics.item.basic_modular_smartphone"));
         } else {
             list.add(new TranslatableComponent("description.modular_electronics.tooltip.key.show_description"));
         }
