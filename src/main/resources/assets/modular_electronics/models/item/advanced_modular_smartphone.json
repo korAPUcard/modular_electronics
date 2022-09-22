@@ -1,14 +1,14 @@
 {
 	"credit": "Made by KOR_APUcard with Blockbench",
 	"textures": {
-		"0": "modular_electronics:item/models/portables/smartphone_base",
-		"1": "modular_electronics:item/models/portables/smartphone_screen",
-		"2": "modular_electronics:item/models/portables/led_indicator",
-		"3": "modular_electronics:item/models/portables/led_tier",
-		"4": "modular_electronics:item/models/portables/led_flashlight",
-		"5": "modular_electronics:item/models/portables/brand_text",
-		"6": "modular_electronics:item/models/portables/brand_logo",
-		"particle": "modular_electronics:item/models/portables/smartphone_base"
+		"0": "modular_electronics:entity/armor/smartphone_base",
+		"1": "modular_electronics:entity/armor/smartphone_screen",
+		"2": "modular_electronics:entity/armor/led_indicator",
+		"3": "modular_electronics:entity/armor/led_tier",
+		"4": "modular_electronics:entity/armor/led_flashlight",
+		"5": "modular_electronics:entity/armor/brand_text",
+		"6": "modular_electronics:entity/armor/brand_logo",
+		"particle": "modular_electronics:entity/armor/smartphone_base"
 	},
 	"elements": [
 		{
@@ -293,6 +293,7 @@
 			}
 		}
 	],
+	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [100, 0, 15],

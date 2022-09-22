@@ -3,7 +3,9 @@ package net.apucsw.modular_electronics.world.item;
 import net.apucsw.modular_electronics.init.ModularElectronicsModKeyMappings;
 import net.apucsw.modular_electronics.init.ModularElectronicsModTabs;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -17,6 +19,10 @@ import java.util.List;
 public class BasicModularSmartphoneItem extends Item {
     public BasicModularSmartphoneItem() {
         super(new Item.Properties().tab(ModularElectronicsModTabs.TAB_MODULAR_ELECTRONICS).stacksTo(1).rarity(Rarity.COMMON));
+    }
+
+    public boolean canAttackBlock(BlockState p_43291_, Level p_43292_, BlockPos p_43293_, Player p_43294_) {
+        return !p_43294_.isCreative();
     }
 
     @Override
