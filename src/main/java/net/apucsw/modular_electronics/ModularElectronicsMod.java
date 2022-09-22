@@ -8,6 +8,7 @@
  */
 package net.apucsw.modular_electronics;
 
+import net.apucsw.modular_electronics.util.ModVersioning;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -30,10 +31,12 @@ import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
 
-@Mod("modular_electronics")
+@Mod(ModularElectronicsMod.MODID)
 public class ModularElectronicsMod {
 	public static final Logger LOGGER = LogManager.getLogger(ModularElectronicsMod.class);
 	public static final String MODID = "modular_electronics";
+	//public static final String MOD_VERSION = "0.1.0";
+	public ModVersioning versionNumber;
 	private static final String PROTOCOL_VERSION = "1";
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION,
 			PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);

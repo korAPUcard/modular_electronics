@@ -1,4 +1,4 @@
-package net.apucsw.powered_defences.network;
+package net.apucsw.modular_electronics.network;
 
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.apucsw.powered_defences.PoweredDefencesMod;
+import net.apucsw.modular_electronics.ModularElectronicsMod;
 
 import java.util.function.Supplier;
 
@@ -39,7 +39,7 @@ public class ShowDescriptionMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PoweredDefencesMod.addNetworkMessage(ShowDescriptionMessage.class, ShowDescriptionMessage::buffer, ShowDescriptionMessage::new,
+		ModularElectronicsMod.addNetworkMessage(ShowDescriptionMessage.class, ShowDescriptionMessage::buffer, ShowDescriptionMessage::new,
 				ShowDescriptionMessage::handler);
 	}
 }

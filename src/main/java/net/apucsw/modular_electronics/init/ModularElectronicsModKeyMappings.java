@@ -22,10 +22,14 @@ import net.minecraft.client.KeyMapping;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class ModularElectronicsModKeyMappings {
-	public static final KeyMapping SHOW_DESCRIPTION = new KeyMapping("key.modular_electronics.show_description", GLFW.GLFW_KEY_LEFT_SHIFT,
+	public static final KeyMapping SHOW_DESCRIPTION = new KeyMapping(
+			"key.modular_electronics.show_description",
+			GLFW.GLFW_KEY_LEFT_SHIFT,
 			"key.categories.modular_electronics");
-	public static final KeyMapping SHOW_DETAIL_INFORMATION = new KeyMapping("key.modular_electronics.show_detail_information",
-			GLFW.GLFW_KEY_LEFT_CONTROL, "key.categories.modular_electronics");
+	public static final KeyMapping SHOW_DETAIL_INFORMATION = new KeyMapping(
+			"key.modular_electronics.show_detail_information",
+			GLFW.GLFW_KEY_LEFT_ALT,
+			"key.categories.modular_electronics");
 
 	@SubscribeEvent
 	public static void registerKeyBindings(FMLClientSetupEvent event) {
