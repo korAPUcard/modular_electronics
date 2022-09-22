@@ -3,6 +3,7 @@ package net.apucsw.modular_electronics.world.item;
 import net.apucsw.modular_electronics.init.ModularElectronicsModKeyMappings;
 import net.apucsw.modular_electronics.init.ModularElectronicsModTabs;
 
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -28,6 +29,8 @@ public class BasicModularSmartphoneItem extends Item {
         super.appendHoverText(itemstack, world, list, flag);
         if (ModularElectronicsModKeyMappings.SHOW_DESCRIPTION.isDown()) {
 
+        } else {
+            list.add(new TranslatableComponent("description.modular_electronics.tooltip.key.show_description"));
         }
     }
 }

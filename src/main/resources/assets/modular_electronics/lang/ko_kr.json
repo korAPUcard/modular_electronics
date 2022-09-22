@@ -4,5 +4,6 @@
   "key.modular_electronics.show_description": "설명 보기",
   "description.modular_electronics.tooltip.key.show_description": "§b%s §7키를 눌러 설명 보기",
   "key.modular_electronics.show_detail_information": "세부 정보 보기",
-  "description.modular_electronics.tooltip.key.show_detail_information": "§b%s §7키를 눌러 세부 정보 보기"
+  "description.modular_electronics.tooltip.key.show_detail_information": "§b%s §7키를 눌러 세부 정보 보기",
+  "description.modular_electronics.item.basic_modular_smartphone": "스마트폰은 휴대 전화와 컴퓨팅 기능을 하나의 장치로 결합한 휴대용 컴퓨터 장치입니다. 기본적으로 독자적인 전용 운영 체제와 카메라를 비롯한 사용자 편의 모바일 컴퓨팅 시스템을 갖추고 있습니다. 모듈 설치기를 통해 추가적인 모듈 탑재가 가능하며 티어 업그레이드 또한 업그레이드 설치기를 통해 가능합니다."
 }
