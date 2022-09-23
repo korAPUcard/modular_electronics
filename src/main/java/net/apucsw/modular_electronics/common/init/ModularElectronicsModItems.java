@@ -6,7 +6,7 @@
  *		This project is fully coded in IntelliJ IDEA.
  *
  */
-package net.apucsw.modular_electronics.init;
+package net.apucsw.modular_electronics.common.init;
 
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,7 +18,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 //import net.apucsw.modular_electronics.item.NetheritePlateItem;	References
-import net.apucsw.modular_electronics.world.item.BasicModularSmartphoneItem;
+import net.apucsw.modular_electronics.common.item.BasicModularSmartphoneItem;
 import net.apucsw.modular_electronics.ModularElectronicsMod;
 
 public class ModularElectronicsModItems {

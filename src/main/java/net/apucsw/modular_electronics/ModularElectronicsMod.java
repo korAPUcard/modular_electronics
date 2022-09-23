@@ -8,7 +8,7 @@
  */
 package net.apucsw.modular_electronics;
 
-import net.apucsw.modular_electronics.util.ModVersioning;
+import net.apucsw.modular_electronics.common.util.ModVersioning;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -22,10 +22,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.apucsw.modular_electronics.init.ModularElectronicsModTabs;
-import net.apucsw.modular_electronics.init.ModularElectronicsModItems;
-import net.apucsw.modular_electronics.init.ModularElectronicsModBlocks;
-import net.apucsw.modular_electronics.init.ModularElectronicsModBlockEntities;
+import net.apucsw.modular_electronics.common.init.ModularElectronicsModTabs;
+import net.apucsw.modular_electronics.common.init.ModularElectronicsModItems;
+import net.apucsw.modular_electronics.common.init.ModularElectronicsModBlocks;
+import net.apucsw.modular_electronics.common.init.ModularElectronicsModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;

@@ -1,7 +1,7 @@
-package net.apucsw.modular_electronics.world.item;
+package net.apucsw.modular_electronics.common.item;
 
-import net.apucsw.modular_electronics.init.ModularElectronicsModKeyMappings;
-import net.apucsw.modular_electronics.init.ModularElectronicsModTabs;
+import net.apucsw.modular_electronics.common.init.ModularElectronicsModKeyMappings;
+import net.apucsw.modular_electronics.common.init.ModularElectronicsModTabs;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.TranslatableComponent;

@@ -1,4 +1,4 @@
-package net.apucsw.modular_electronics.util;
+package net.apucsw.modular_electronics.common.util;
 
 import net.minecraftforge.fml.ModContainer;
 import org.apache.maven.artifact.versioning.ArtifactVersion;

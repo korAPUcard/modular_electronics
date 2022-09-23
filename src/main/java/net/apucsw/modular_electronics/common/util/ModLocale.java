@@ -1,4 +1,4 @@
-package net.apucsw.modular_electronics.util;
+package net.apucsw.modular_electronics.common.util;
 
 public class ModLocale {
     // The codes used only for development testing yet.

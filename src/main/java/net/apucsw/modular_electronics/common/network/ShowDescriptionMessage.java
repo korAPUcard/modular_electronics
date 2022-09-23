@@ -1,4 +1,4 @@
-package net.apucsw.modular_electronics.network;
+package net.apucsw.modular_electronics.common.network;
 
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -12,25 +12,25 @@ import net.apucsw.modular_electronics.ModularElectronicsMod;
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ShowDetailInformationMessage {
+public class ShowDescriptionMessage {
 	int type, pressedms;
 
-	public ShowDetailInformationMessage(int type, int pressedms) {
+	public ShowDescriptionMessage(int type, int pressedms) {
 		this.type = type;
 		this.pressedms = pressedms;
 	}
 
-	public ShowDetailInformationMessage(FriendlyByteBuf buffer) {
+	public ShowDescriptionMessage(FriendlyByteBuf buffer) {
 		this.type = buffer.readInt();
 		this.pressedms = buffer.readInt();
 	}
 
-	public static void buffer(ShowDetailInformationMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(ShowDescriptionMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.type);
 		buffer.writeInt(message.pressedms);
 	}
 
-	public static void handler(ShowDetailInformationMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(ShowDescriptionMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 		});
@@ -39,7 +39,7 @@ public class ShowDetailInformationMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		ModularElectronicsMod.addNetworkMessage(ShowDetailInformationMessage.class, ShowDetailInformationMessage::buffer,
-				ShowDetailInformationMessage::new, ShowDetailInformationMessage::handler);
+		ModularElectronicsMod.addNetworkMessage(ShowDescriptionMessage.class, ShowDescriptionMessage::buffer, ShowDescriptionMessage::new,
+				ShowDescriptionMessage::handler);
 	}
 }

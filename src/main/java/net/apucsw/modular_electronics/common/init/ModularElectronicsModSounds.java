@@ -6,7 +6,7 @@
  *		This project is fully coded in IntelliJ IDEA.
  *
  */
-package net.apucsw.modular_electronics.init;
+package net.apucsw.modular_electronics.common.init;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

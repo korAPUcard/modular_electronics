@@ -6,7 +6,7 @@
  *		This project is fully coded in IntelliJ IDEA.
  *
  */
-package net.apucsw.modular_electronics.init;
+package net.apucsw.modular_electronics.common.init;
 
 import org.lwjgl.glfw.GLFW;
 

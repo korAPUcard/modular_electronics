@@ -1,4 +1,4 @@
-package net.apucsw.apuclib.shared.util;
+package net.apucsw.modular_electronics.common.util;
 
 import net.minecraft.world.damagesource.DamageSource;
 
