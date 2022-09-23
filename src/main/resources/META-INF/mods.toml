@@ -73,3 +73,17 @@ Most devices will required the power. Commonly used Forge Energy(FE).
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.modular_electronics]]
+    modId="curios"
+    mandatory=true
+    versionRange="[1.18.2-5.0.7.1,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.modular_electronics]]
+    modId="cc-tweaked"
+    mandatory=true
+    versionRange="[1.100.9,)"
+    ordering="NONE"
+    side="BOTH"
