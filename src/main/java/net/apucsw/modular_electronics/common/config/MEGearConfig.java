@@ -1,8 +1,5 @@
 package net.apucsw.modular_electronics.common.config;
 
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import mekanism.api.math.FloatingLong;
 import mekanism.common.config.BaseMekanismConfig;
 import mekanism.common.config.value.CachedFloatingLongValue;
