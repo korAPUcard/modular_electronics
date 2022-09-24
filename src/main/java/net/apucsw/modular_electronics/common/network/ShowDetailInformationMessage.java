@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.apucsw.modular_electronics.ModularElectronicsMod;
+import net.apucsw.modular_electronics.common.ModularElectronicsMod;
 
 import java.util.function.Supplier;
 

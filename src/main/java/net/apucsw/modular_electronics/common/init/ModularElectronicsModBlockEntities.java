@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.Block;
 
 //import net.apucsw.modular_electronics.block.entity.ForcefieldBarrierVerticalSingleShieldEmitBlockEntity;	// References
 //import net.apucsw.modular_electronics.block.entity.ForcefieldBarrierVerticalSingleBlockEntity;
-import net.apucsw.modular_electronics.ModularElectronicsMod;
+import net.apucsw.modular_electronics.common.ModularElectronicsMod;
 
 public class ModularElectronicsModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES,

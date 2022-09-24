@@ -8,7 +8,18 @@
  */
 package net.apucsw.modular_electronics.common.init;
 
-import net.minecraftforge.registries.RegistryObject;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+import mekanism.common.Mekanism;
+import mekanism.common.block.prefab.BlockFactoryMachine;
+import mekanism.common.content.blocktype.FactoryType;
+import mekanism.common.item.block.machine.ItemBlockFactory;
+import mekanism.common.registration.impl.BlockDeferredRegister;
+import mekanism.common.registration.impl.BlockRegistryObject;
+import mekanism.common.resource.IResource;
+import mekanism.common.resource.ore.OreBlockType;
+import mekanism.common.resource.ore.OreType;
+import mekanism.common.tier.FactoryTier;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -19,50 +30,31 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.block.Block;
 
 //import net.apucsw.powered_defences.block.ForcefieldBarrierVerticalSingleShieldEmitBlock;		//References
-//import net.apucsw.powered_defences.block.ForcefieldBarrierVerticalSingleBlock;
-import net.apucsw.modular_electronics.ModularElectronicsMod;
+import net.apucsw.modular_electronics.common.ModularElectronicsMod;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class ModularElectronicsModBlocks {
+	/*
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, ModularElectronicsMod.MODID);
-	/*		References
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_VERTICAL_SINGLE = REGISTRY.register("forcefield_barrier_vertical_single",
-			() -> new ForcefieldBarrierVerticalSingleBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_VERTICAL_DOUBLE = REGISTRY.register("forcefield_barrier_vertical_double",
-			() -> new ForcefieldBarrierVerticalDoubleBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_VERTICAL_BLOCK = REGISTRY.register("forcefield_barrier_vertical_block",
-			() -> new ForcefieldBarrierVerticalBlockBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_VERTICAL_SINGLE_SHIELD_EMIT = REGISTRY
-			.register("forcefield_barrier_vertical_single_shield_emit", () -> new ForcefieldBarrierVerticalSingleShieldEmitBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_VERTICAL_DOUBLE_SHIELD_EMIT = REGISTRY
-			.register("forcefield_barrier_vertical_double_shield_emit", () -> new ForcefieldBarrierVerticalDoubleShieldEmitBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_HORIZONTAL_SINGLE = REGISTRY.register("forcefield_barrier_horizontal_single",
-			() -> new ForcefieldBarrierHorizontalSingleBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_HORIZONTAL_DOUBLE = REGISTRY.register("forcefield_barrier_horizontal_double",
-			() -> new ForcefieldBarrierHorizontalDoubleBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_HORIZONTAL_SINGLE_SHIELD_EMIT = REGISTRY
-			.register("forcefield_barrier_horizontal_single_shield_emit", () -> new ForcefieldBarrierHorizontalSingleShieldEmitBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_HORIZONTAL_DOUBLE_SHIELD_EMIT = REGISTRY
-			.register("forcefield_barrier_horizontal_double_shield_emit", () -> new ForcefieldBarrierHorizontalDoubleShieldEmitBlock());
-	public static final RegistryObject<Block> FORCEFIELD_BARRIER_HORIZONTAL_BLOCK = REGISTRY.register("forcefield_barrier_horizontal_block",
-			() -> new ForcefieldBarrierHorizontalBlockBlock());
-	*/
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
-			/*
-			ForcefieldBarrierVerticalSingleBlock.registerRenderLayer();
-			ForcefieldBarrierVerticalDoubleBlock.registerRenderLayer();
-			ForcefieldBarrierVerticalBlockBlock.registerRenderLayer();
-			ForcefieldBarrierVerticalSingleShieldEmitBlock.registerRenderLayer();
-			ForcefieldBarrierVerticalDoubleShieldEmitBlock.registerRenderLayer();
-			ForcefieldBarrierHorizontalSingleBlock.registerRenderLayer();
-			ForcefieldBarrierHorizontalDoubleBlock.registerRenderLayer();
-			ForcefieldBarrierHorizontalSingleShieldEmitBlock.registerRenderLayer();
-			ForcefieldBarrierHorizontalDoubleShieldEmitBlock.registerRenderLayer();
-			ForcefieldBarrierHorizontalBlockBlock.registerRenderLayer();
-			*/
+			//
 		}
 	}
+	 */
+	private ModularElectronicsModBlocks() {
+
+	}
+
+	public static final BlockDeferredRegister BLOCKS = new BlockDeferredRegister(ModularElectronicsMod.MODID);
+
+	public static final Map<IResource, BlockRegistryObject<?, ?>> PROCESSED_RESOURCE_BLOCKS = new LinkedHashMap<>();
+	public static final Map<OreType, OreBlockType> ORES = new LinkedHashMap<>();
+
+	private static final Table<FactoryTier, FactoryType, BlockRegistryObject<BlockFactoryMachine.BlockFactory<?>, ItemBlockFactory>> FACTORIES = HashBasedTable.create();
 }

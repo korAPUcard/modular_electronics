@@ -6,7 +6,7 @@
  *		This project is fully coded in IntelliJ IDEA.
  *
  */
-package net.apucsw.modular_electronics;
+package net.apucsw.modular_electronics.common;
 
 import net.apucsw.modular_electronics.common.util.ModVersioning;
 import org.apache.logging.log4j.Logger;
@@ -25,7 +25,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.apucsw.modular_electronics.common.init.ModularElectronicsModTabs;
 import net.apucsw.modular_electronics.common.init.ModularElectronicsModItems;
 import net.apucsw.modular_electronics.common.init.ModularElectronicsModBlocks;
-import net.apucsw.modular_electronics.common.init.ModularElectronicsModBlockEntities;
+//import net.apucsw.modular_electronics.common.init.ModularElectronicsModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -44,17 +44,25 @@ public class ModularElectronicsMod {
 
 	public ModularElectronicsMod() {
 		ModularElectronicsModTabs.load();
+		/*
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		ModularElectronicsModBlocks.REGISTRY.register(bus);
 		ModularElectronicsModItems.REGISTRY.register(bus);
 
 		ModularElectronicsModBlockEntities.REGISTRY.register(bus);
-
+		 */
+		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		ModularElectronicsModItems.ITEMS.register(modEventBus);
+		ModularElectronicsModBlocks.BLOCKS.register(modEventBus);
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,
 			BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
 		PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
 		messageID++;
+	}
+
+	public static ResourceLocation rl(String path) {
+		return new ResourceLocation("modular_electronics", path);
 	}
 }
