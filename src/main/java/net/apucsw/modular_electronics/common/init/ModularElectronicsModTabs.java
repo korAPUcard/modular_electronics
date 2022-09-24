@@ -6,10 +6,6 @@
  *		This project is fully coded in IntelliJ IDEA.
  *
  */
-/*
- * The code of this source file is referenced and copied from Mekanism mod's code.
- * The some code copyright of this source file belongs to the developers of Mekanism mod.
- */
 package net.apucsw.modular_electronics.common.init;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -25,8 +21,7 @@ public class ModularElectronicsModTabs {
 		TAB_MODULAR_ELECTRONICS = new CreativeModeTab("tab_modular_electronics") {
 			@Override
 			public ItemStack makeIcon() {
-				//return new ItemStack(ModularElectronicsModItems.BASIC_MODULAR_SMARTPHONE.get());
-				return ModularElectronicsModItems.BASIC_MODULAR_SMARTPHONE.getItemStack();
+				return new ItemStack(ModularElectronicsModItems.BASIC_MODULAR_SMARTPHONE.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)
