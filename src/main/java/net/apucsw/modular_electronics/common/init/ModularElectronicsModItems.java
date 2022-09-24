@@ -6,8 +6,15 @@
  *		This project is fully coded in IntelliJ IDEA.
  *
  */
+/*
+ * The code of this source file is referenced and copied from Mekanism mod's code.
+ * The some code copyright of this source file belongs to the developers of Mekanism mod.
+ */
 package net.apucsw.modular_electronics.common.init;
 
+import mekanism.common.item.ItemEnergized;
+import mekanism.common.registration.impl.ItemDeferredRegister;
+import mekanism.common.registration.impl.ItemRegistryObject;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,11 +29,15 @@ import net.apucsw.modular_electronics.common.item.ItemBasicModularSmartphone;
 import net.apucsw.modular_electronics.ModularElectronicsMod;
 
 public class ModularElectronicsModItems {
-	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, ModularElectronicsMod.MODID);
-	public static final RegistryObject<Item> BASIC_MODULAR_SMARTPHONE = REGISTRY.register("basic_modular_smartphone",
-			() -> new ItemBasicModularSmartphone());
+	//public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, ModularElectronicsMod.MODID);
+	public static final ItemDeferredRegister ITEMS = new ItemDeferredRegister(ModularElectronicsMod.MODID);
+	//public static final RegistryObject<Item> BASIC_MODULAR_SMARTPHONE = REGISTRY.register("basic_modular_smartphone",
+	//		() -> new ItemBasicModularSmartphone());
+	public static final ItemRegistryObject<ItemBasicModularSmartphone> BASIC_MODULAR_SMARTPHONE = ITEMS.register("basic_modular_smartphone", ItemBasicModularSmartphone::new);
 
+	/*
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
 	}
+	*/
 }

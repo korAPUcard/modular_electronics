@@ -44,11 +44,14 @@ public class ModularElectronicsMod {
 
 	public ModularElectronicsMod() {
 		ModularElectronicsModTabs.load();
-		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		ModularElectronicsModBlocks.REGISTRY.register(bus);
-		ModularElectronicsModItems.REGISTRY.register(bus);
+		//IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		//ModularElectronicsModBlocks.REGISTRY.register(bus);
+		//ModularElectronicsModItems.REGISTRY.register(bus);
+		ModularElectronicsModItems.ITEMS.register(modEventBus);
+		//ModularElectronicsModBlocks.BLOCKS.register(modEventBus);
 
-		ModularElectronicsModBlockEntities.REGISTRY.register(bus);
+		//ModularElectronicsModBlockEntities.REGISTRY.register(bus);
 
 	}
 
