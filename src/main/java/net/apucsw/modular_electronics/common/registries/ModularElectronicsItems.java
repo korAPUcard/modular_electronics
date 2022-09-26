@@ -6,7 +6,7 @@
  *		This project is fully coded in IntelliJ IDEA.
  *
  */
-package net.apucsw.modular_electronics.common.init;
+package net.apucsw.modular_electronics.common.registries;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
@@ -20,7 +20,7 @@ import net.minecraft.world.item.Item;
 
 import net.apucsw.modular_electronics.common.ModularElectronicsMod;
 
-public class ModularElectronicsModItems {
+public class ModularElectronicsItems {
 	public static final ItemDeferredRegister ITEMS = new ItemDeferredRegister(ModularElectronicsMod.MODID);
 	public static final Table<ResourceType, PrimaryResource, ItemRegistryObject<Item>> PROCESSED_RESOURCES = HashBasedTable.create();
 

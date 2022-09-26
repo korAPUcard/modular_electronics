@@ -25,7 +25,7 @@ import mekanism.common.util.SecurityUtils;
 import mekanism.common.util.StorageUtils;
 import net.apucsw.modular_electronics.common.ModularElectronicsLang;
 import net.apucsw.modular_electronics.common.config.ModularElectronicsConfig;
-import net.apucsw.modular_electronics.common.init.ModularElectronicsModTabs;
+import net.apucsw.modular_electronics.common.init.CreativeTabModularElectronics;
 
 import net.apucsw.modular_electronics.common.registries.ModularElectronicsContainerTypes;
 import net.minecraft.core.BlockPos;
@@ -54,7 +54,7 @@ public class ItemModularSmartphone extends ItemEnergized implements IModuleConta
     private final Multimap<Attribute, AttributeModifier> attributes;
 
     public ItemModularSmartphone(Properties properties) {
-        super(ModularElectronicsConfig.gear.modularSmartphoneBaseChargeRate, ModularElectronicsConfig.gear.modularSmartphoneBaseEnergyCapacity, properties.tab(ModularElectronicsModTabs.TAB_MODULAR_ELECTRONICS).rarity(Rarity.COMMON).setNoRepair());
+        super(ModularElectronicsConfig.gear.modularSmartphoneBaseChargeRate, ModularElectronicsConfig.gear.modularSmartphoneBaseEnergyCapacity, properties.tab(CreativeTabModularElectronics.TAB_MODULAR_ELECTRONICS).rarity(Rarity.COMMON).setNoRepair());
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         this.attributes = builder.build();
     }

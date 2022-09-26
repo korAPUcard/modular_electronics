@@ -8,6 +8,7 @@
  */
 package net.apucsw.modular_electronics.common;
 
+import net.apucsw.modular_electronics.common.registries.ModularElectronicsBlocks;
 import net.apucsw.modular_electronics.common.util.ModVersioning;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -22,9 +23,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.apucsw.modular_electronics.common.init.ModularElectronicsModTabs;
-import net.apucsw.modular_electronics.common.init.ModularElectronicsModItems;
-import net.apucsw.modular_electronics.common.init.ModularElectronicsModBlocks;
+import net.apucsw.modular_electronics.common.init.CreativeTabModularElectronics;
+import net.apucsw.modular_electronics.common.registries.ModularElectronicsItems;
 //import net.apucsw.modular_electronics.common.init.ModularElectronicsModBlockEntities;
 
 import java.util.function.Supplier;
@@ -43,17 +43,17 @@ public class ModularElectronicsMod {
 	private static int messageID = 0;
 
 	public ModularElectronicsMod() {
-		ModularElectronicsModTabs.load();
+		CreativeTabModularElectronics.load();
 		/*
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		ModularElectronicsModBlocks.REGISTRY.register(bus);
-		ModularElectronicsModItems.REGISTRY.register(bus);
+		ModularElectronicsBlocks.REGISTRY.register(bus);
+		ModularElectronicsItems.REGISTRY.register(bus);
 
 		ModularElectronicsModBlockEntities.REGISTRY.register(bus);
 		 */
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		ModularElectronicsModItems.ITEMS.register(modEventBus);
-		ModularElectronicsModBlocks.BLOCKS.register(modEventBus);
+		ModularElectronicsItems.ITEMS.register(modEventBus);
+		ModularElectronicsBlocks.BLOCKS.register(modEventBus);
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,
