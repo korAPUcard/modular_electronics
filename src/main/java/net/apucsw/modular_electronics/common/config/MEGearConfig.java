@@ -28,8 +28,8 @@ public class MEGearConfig extends BaseMekanismConfig {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
         builder.comment("Gear Config. This config is synced from server to client.").push("gear");
         builder.comment("Modular Smartphone Settings").push("modular_smartphone");
-        this.modularSmartphoneBaseEnergyCapacity = CachedFloatingLongValue.define(this, builder, "Energy capacity (Joules) of Modular Smartphone items without any installed upgrades. Quadratically scaled by upgrades.", "baseEnergyCapacity", FloatingLong.createConst(80000L));
-        this.modularSmartphoneBaseChargeRate = CachedFloatingLongValue.define(this, builder, "Amount (joules) of energy the Modular Smartphone can accept per tick. Quadratically scaled by upgrades.", "baseChargeRate", FloatingLong.createConst(5000L));
+        this.modularSmartphoneBaseEnergyCapacity = CachedFloatingLongValue.define(this, builder, "Energy capacity (Joules) of Modular Smartphone items without any installed upgrades. Quadratically scaled by upgrades.", "baseEnergyCapacity", FloatingLong.createConst(200000L));
+        this.modularSmartphoneBaseChargeRate = CachedFloatingLongValue.define(this, builder, "Amount (joules) of energy the Modular Smartphone can accept per tick. Quadratically scaled by upgrades.", "baseChargeRate", FloatingLong.createConst(1000L));
         this.modularSmartphoneEnergyUsage = CachedFloatingLongValue.define(this, builder, "Base energy (Joules) usage of the Modular Smartphone when it's GUI opened.", "energyUsage", FloatingLong.createConst(5L));
         this.modularSmartphoneEnergyUsageIdle = CachedFloatingLongValue.define(this, builder, "Base energy (Joules) usage of the Modular Smartphone when it's powered on.", "energyUsageIdle", FloatingLong.createConst(1L));
         this.modularSmartphoneEnergyUsageCamera = CachedFloatingLongValue.define(this, builder, "Cost in Joules of using the Modular Smartphone to activates camera.", "energyUsageCamera", FloatingLong.createConst(4L));

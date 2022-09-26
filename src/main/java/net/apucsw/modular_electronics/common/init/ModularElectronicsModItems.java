@@ -15,24 +15,14 @@ import mekanism.common.registration.impl.ItemRegistryObject;
 import mekanism.common.resource.PrimaryResource;
 import mekanism.common.resource.ResourceType;
 
+import net.apucsw.modular_electronics.common.item.ItemModularSmartphone;
 import net.minecraft.world.item.Item;
 
-//import net.apucsw.modular_electronics.item.NetheritePlateItem;	References
-import net.apucsw.modular_electronics.common.item.ItemBasicModularSmartphone;
 import net.apucsw.modular_electronics.common.ModularElectronicsMod;
 
 public class ModularElectronicsModItems {
-	/*
-	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, ModularElectronicsMod.MODID);
-	public static final RegistryObject<Item> BASIC_MODULAR_SMARTPHONE = REGISTRY.register("basic_modular_smartphone",
-			() -> new ItemBasicModularSmartphone());
-
-	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
-		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
-	}
-	 */
 	public static final ItemDeferredRegister ITEMS = new ItemDeferredRegister(ModularElectronicsMod.MODID);
 	public static final Table<ResourceType, PrimaryResource, ItemRegistryObject<Item>> PROCESSED_RESOURCES = HashBasedTable.create();
 
-	public static final ItemRegistryObject<ItemBasicModularSmartphone> BASIC_MODULAR_SMARTPHONE = ITEMS.register("basic_modular_smartphone", ItemBasicModularSmartphone::new);
+	public static final ItemRegistryObject<ItemModularSmartphone> MODULAR_SMARTPHONE = ITEMS.register("modular_smartphone", ItemModularSmartphone::new);
 }

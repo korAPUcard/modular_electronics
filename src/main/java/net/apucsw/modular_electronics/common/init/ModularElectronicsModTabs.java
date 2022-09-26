@@ -21,7 +21,7 @@ public class ModularElectronicsModTabs {
 		TAB_MODULAR_ELECTRONICS = new CreativeModeTab("tab_modular_electronics") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(ModularElectronicsModItems.BASIC_MODULAR_SMARTPHONE.get());
+				return new ItemStack(ModularElectronicsModItems.MODULAR_SMARTPHONE.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)

@@ -2,6 +2,7 @@ package net.apucsw.modular_electronics.common.item;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import mekanism.api.MekanismAPI;
 import mekanism.api.gear.ICustomModule;
 import mekanism.api.gear.IModule;
 import mekanism.api.math.FloatingLong;
@@ -9,27 +10,33 @@ import mekanism.api.text.EnumColor;
 import mekanism.client.key.MekKeyHandler;
 import mekanism.client.key.MekanismKeyHandler;
 import mekanism.common.MekanismLang;
-import mekanism.common.config.MekanismConfig;
+import mekanism.common.capabilities.ItemCapabilityWrapper;
+import mekanism.common.capabilities.security.item.ItemStackSecurityObject;
 import mekanism.common.content.gear.IModuleContainerItem;
 import mekanism.common.content.gear.Module;
 import mekanism.common.content.gear.shared.ModuleEnergyUnit;
 import mekanism.common.item.ItemEnergized;
+import mekanism.common.item.gear.ItemAtomicDisassembler;
+import mekanism.common.item.interfaces.IGuiItem;
 import mekanism.common.item.interfaces.IModeItem;
+import mekanism.common.registration.impl.ContainerTypeRegistryObject;
 import mekanism.common.registries.MekanismModules;
+import mekanism.common.util.SecurityUtils;
 import mekanism.common.util.StorageUtils;
-//import net.apucsw.modular_electronics.common.init.ModularElectronicsModKeyMappings;
 import net.apucsw.modular_electronics.common.ModularElectronicsLang;
 import net.apucsw.modular_electronics.common.config.ModularElectronicsConfig;
 import net.apucsw.modular_electronics.common.init.ModularElectronicsModTabs;
 
+import net.apucsw.modular_electronics.common.registries.ModularElectronicsContainerTypes;
 import net.minecraft.core.BlockPos;
-//import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
-//import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
@@ -43,10 +50,10 @@ import net.minecraftforge.common.ToolAction;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class ItemBasicModularSmartphone extends ItemEnergized implements IModuleContainerItem, IModeItem {
+public class ItemModularSmartphone extends ItemEnergized implements IModuleContainerItem, IModeItem, IGuiItem {
     private final Multimap<Attribute, AttributeModifier> attributes;
 
-    public ItemBasicModularSmartphone(Properties properties) {
+    public ItemModularSmartphone(Properties properties) {
         super(ModularElectronicsConfig.gear.modularSmartphoneBaseChargeRate, ModularElectronicsConfig.gear.modularSmartphoneBaseEnergyCapacity, properties.tab(ModularElectronicsModTabs.TAB_MODULAR_ELECTRONICS).rarity(Rarity.COMMON).setNoRepair());
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         this.attributes = builder.build();
@@ -55,6 +62,7 @@ public class ItemBasicModularSmartphone extends ItemEnergized implements IModule
     @Override
     public void appendHoverText(@Nonnull ItemStack stack, Level world, @Nonnull List<Component> tooltip, @Nonnull TooltipFlag flag) {
         StorageUtils.addStoredEnergy(stack, tooltip, true);
+        MekanismAPI.getSecurityUtils().addSecurityTooltip(stack, tooltip);
         if (MekKeyHandler.isKeyPressed(MekanismKeyHandler.descriptionKey)) {
             tooltip.add(ModularElectronicsLang.DESCRIPTION_MODULAR_SMARTPHONE.translateColored(EnumColor.WHITE));
         } else {
@@ -66,6 +74,14 @@ public class ItemBasicModularSmartphone extends ItemEnergized implements IModule
         } else {
             tooltip.add(MekanismLang.HOLD_FOR_MODULES.translateColored(EnumColor.GRAY, EnumColor.INDIGO, MekanismKeyHandler.detailsKey.getTranslatedKeyMessage()));
         }
+    }
+
+    @Override
+    public boolean canPerformAction(ItemStack stack, ToolAction action) {
+        if (ItemAtomicDisassembler.ALWAYS_SUPPORTED_ACTIONS.contains(action)) {
+            return true;
+        }
+        return getModules(stack).stream().anyMatch(module -> module.isEnabled() && canPerformAction(module, action));
     }
 
     private <MODULE extends ICustomModule<MODULE>> boolean canPerformAction(IModule<MODULE> module, ToolAction action) {
@@ -108,6 +124,23 @@ public class ItemBasicModularSmartphone extends ItemEnergized implements IModule
                 return;
             }
         }
+    }
+
+    @Nonnull
+    @Override
+    public InteractionResultHolder<ItemStack> use(@Nonnull Level world, @Nonnull Player player, @Nonnull InteractionHand hand) {
+        return SecurityUtils.INSTANCE.claimOrOpenGui(world, player, hand, getContainerType()::tryOpenGui);
+    }
+
+    @Override
+    public ContainerTypeRegistryObject<?> getContainerType() {
+        return ModularElectronicsContainerTypes.MODULAR_SMARTPHONE;
+    }
+
+    @Override
+    protected void gatherCapabilities(List<ItemCapabilityWrapper.ItemCapability> capabilities, ItemStack stack, CompoundTag nbt) {
+        capabilities.add(new ItemStackSecurityObject());
+        super.gatherCapabilities(capabilities, stack, nbt);
     }
 
     public boolean canAttackBlock(BlockState p_43291_, Level p_43292_, BlockPos p_43293_, Player p_43294_) {
