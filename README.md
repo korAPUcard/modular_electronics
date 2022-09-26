@@ -14,7 +14,8 @@
 
 ### Description
 This MOD will add variable portable devices and stationary machines.   
-Most devices will require the power. Commonly used Forge Energy(FE).
+Most devices will require the power. Commonly used Forge Energy(FE).   
+But the mod is based on Mekanism. So default power unit is Joules.
 
 **It's still in development.**
 
