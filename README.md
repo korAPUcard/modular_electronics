@@ -14,8 +14,8 @@
 
 ### Description
 This MOD will add variable portable devices and stationary machines.   
-Most devices will require the power. Commonly used Forge Energy(FE).   
-But the mod is based on Mekanism. So default power unit is Joules.
+Most devices will require the power. Commonly used Forge Energy(FE). but mostly used Joules(Mekanism).   
+This mod works based on Mekanism and CC.
 
 **It's still in development.**
 
@@ -29,6 +29,25 @@ But the mod is based on Mekanism. So default power unit is Joules.
 | 1.18       | **In development** |
 | ~~1.17~~   | Skipped            |
 | ~~1.16~~   | Skipped            |
+
+-----
+
+### Mod dependencies
+
+| Mod name              | Mandatory | Recommendations           |
+|-----------------------|-----------|---------------------------|
+| Mekanism              | True      | Required                  |
+| Mekanism Generators   | False     | Yes                       |
+| Mekanism Additional   | True      | Required                  |
+| Mekanism Tools        | False     | Maybe                     |
+| ComputerCraft:Tweaked | True      | Required                  |
+| Just Enough Items     | False     | Normal                    |
+| Curios API            | True      | Required                  |
+| OpenComputers         | Null      | TBA(When they release it) |
+| Project:Red           | Null      | TBA(When they release it) |
+
+**NOTE**   
+If the OC is updated for newer Minecraft version, I would like to support it, but considering there is no news of the OC update, it probably won't happen.
 
 -----
 
