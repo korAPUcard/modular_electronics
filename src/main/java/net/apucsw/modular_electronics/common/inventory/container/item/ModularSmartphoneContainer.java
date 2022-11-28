@@ -10,4 +10,8 @@ public class ModularSmartphoneContainer extends MekanismItemContainer {
     public ModularSmartphoneContainer(int id, Inventory inv, InteractionHand hand, ItemStack stack) {
         super(ModularElectronicsContainerTypes.MODULAR_SMARTPHONE, id, inv, hand, stack);
     }
+
+    public ItemStack getStack() {
+        return stack;
+    }
 }

@@ -1,4 +1,6 @@
 {
+  "constants.modular_electronics.log_format":"[%1$s] %2$s",
+  "constants.modular_electronics.mod_name":"Modular Electronics",
   "itemGroup.tab_modular_electronics": "Modular Electronics",
   "key.categories.modular_electronics": "Modular Electronics",
   "key.modular_electronics.show_description": "Show Description",

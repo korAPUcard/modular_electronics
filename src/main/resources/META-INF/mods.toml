@@ -68,6 +68,20 @@ Most devices will required the power. Commonly used Forge Energy(FE).
     side="BOTH"
 
 [[dependencies.modular_electronics]]
+    modId="mekanismadditions"
+    mandatory=true
+    versionRange="[1.18.2-10.2.5.465,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.modular_electronics]]
+    modId="computercraft"
+    mandatory=true
+    versionRange="[1.100.9,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.modular_electronics]]
     modId="jei"
     mandatory=false
     versionRange="[0,)"
@@ -82,8 +96,22 @@ Most devices will required the power. Commonly used Forge Energy(FE).
     side="BOTH"
 
 [[dependencies.modular_electronics]]
-    modId="computercraft"
-    mandatory=true
-    versionRange="[1.100.9,)"
+	modId="entitymodeljson"
+	mandatory=true
+	versionRange="[1.0.4,)"
+	ordering="NONE"
+	side="CLIENT"
+
+[[dependencies.powered_defences]]
+    modId="mekanism_aerospace"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.powered_defences]]
+    modId="cyber_vehicles"
+    mandatory=false
+    versionRange="[0,)"
     ordering="NONE"
     side="BOTH"

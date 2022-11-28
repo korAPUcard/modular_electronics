@@ -17,11 +17,11 @@ import net.minecraft.world.level.block.Block;
 
 //import net.apucsw.modular_electronics.block.entity.ForcefieldBarrierVerticalSingleShieldEmitBlockEntity;	// References
 //import net.apucsw.modular_electronics.block.entity.ForcefieldBarrierVerticalSingleBlockEntity;
-import net.apucsw.modular_electronics.common.ModularElectronicsMod;
+import net.apucsw.modular_electronics.common.ModularElectronics;
 
 public class ModularElectronicsModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES,
-			ModularElectronicsMod.MODID);
+			ModularElectronics.MODID);
 	/*	References
 	public static final RegistryObject<BlockEntityType<?>> FORCEFIELD_BARRIER_VERTICAL_SINGLE = register("forcefield_barrier_vertical_single",
 			PoweredDefencesModBlocks.FORCEFIELD_BARRIER_VERTICAL_SINGLE, ForcefieldBarrierVerticalSingleBlockEntity::new);

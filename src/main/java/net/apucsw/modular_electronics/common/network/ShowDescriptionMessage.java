@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.apucsw.modular_electronics.common.ModularElectronicsMod;
+import net.apucsw.modular_electronics.common.ModularElectronics;
 
 import java.util.function.Supplier;
 
@@ -39,7 +39,7 @@ public class ShowDescriptionMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		ModularElectronicsMod.addNetworkMessage(ShowDescriptionMessage.class, ShowDescriptionMessage::buffer, ShowDescriptionMessage::new,
+		ModularElectronics.addNetworkMessage(ShowDescriptionMessage.class, ShowDescriptionMessage::buffer, ShowDescriptionMessage::new,
 				ShowDescriptionMessage::handler);
 	}
 }

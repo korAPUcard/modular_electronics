@@ -20,7 +20,7 @@ import mekanism.common.resource.ore.OreBlockType;
 import mekanism.common.resource.ore.OreType;
 import mekanism.common.tier.FactoryTier;
 
-import net.apucsw.modular_electronics.common.ModularElectronicsMod;
+import net.apucsw.modular_electronics.common.ModularElectronics;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -30,7 +30,7 @@ public class ModularElectronicsBlocks {
 
 	}
 
-	public static final BlockDeferredRegister BLOCKS = new BlockDeferredRegister(ModularElectronicsMod.MODID);
+	public static final BlockDeferredRegister BLOCKS = new BlockDeferredRegister(ModularElectronics.MODID);
 
 	public static final Map<IResource, BlockRegistryObject<?, ?>> PROCESSED_RESOURCE_BLOCKS = new LinkedHashMap<>();
 	public static final Map<OreType, OreBlockType> ORES = new LinkedHashMap<>();

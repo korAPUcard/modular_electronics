@@ -1,19 +1,19 @@
 package net.apucsw.modular_electronics.common;
 
 import mekanism.api.text.ILangEntry;
-import mekanism.common.Mekanism;
 import net.minecraft.Util;
 
 public enum ModularElectronicsLang implements ILangEntry {
+    MODULAR_ELECTRONICS("constants", "mod_name"),
     DESCRIPTION_MODULAR_SMARTPHONE("description", "modular_smartphone");
 
     private final String key;
 
-    private ModularElectronicsLang(String type, String path) {
-        this(Util.makeDescriptionId(type, ModularElectronicsMod.rl(path)));
+    ModularElectronicsLang(String type, String path) {
+        this(Util.makeDescriptionId(type, ModularElectronics.rl(path)));
     }
 
-    private ModularElectronicsLang(String key) {
+    ModularElectronicsLang(String key) {
         this.key = key;
     }
 
