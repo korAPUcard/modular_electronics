@@ -23,12 +23,12 @@ This mod works based on Mekanism and CC.
 
 ### Currently development in Minecraft version
 
-| MC version | Status             |
-|------------|--------------------|
-| 1.19       | *Not planned yet*  |
-| 1.18       | **In development** |
-| ~~1.17~~   | Skipped            |
-| ~~1.16~~   | Skipped            |
+| MC version | Status                  |
+|------------|-------------------------|
+| 1.19       | ***Planning***          |
+| 1.18       | **Working in progress** |
+| ~~1.17~~   | Skipped                 |
+| ~~1.16~~   | Skipped                 |
 
 -----
 
