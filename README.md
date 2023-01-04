@@ -23,12 +23,12 @@ This mod works based on Mekanism and CC.
 
 ### Currently development in Minecraft version
 
-| MC version | Status             |
-|------------|--------------------|
-| 1.19       | *Not planned yet*  |
-| 1.18       | **In development** |
-| ~~1.17~~   | Skipped            |
-| ~~1.16~~   | Skipped            |
+| MC version | Status               |
+|------------|----------------------|
+| 1.19       | **Work in progress** |
+| 1.18       | **Work in progress** |
+| ~~1.17~~   | Skipped              |
+| ~~1.16~~   | Skipped              |
 
 -----
 
@@ -39,7 +39,7 @@ This mod works based on Mekanism and CC.
 | Mekanism              | True      | Required                  |
 | Mekanism Generators   | False     | Yes                       |
 | Mekanism Additional   | True      | Required                  |
-| Mekanism Tools        | False     | Maybe                     |
+| Mekanism Tools        | False     | No                        |
 | ComputerCraft:Tweaked | True      | Required                  |
 | Just Enough Items     | False     | Normal                    |
 | Curios API            | True      | Required                  |
