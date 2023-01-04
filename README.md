@@ -39,7 +39,7 @@ This mod works based on Mekanism and CC.
 | Mekanism              | True      | Required                  |
 | Mekanism Generators   | False     | Yes                       |
 | Mekanism Additional   | True      | Required                  |
-| Mekanism Tools        | False     | Maybe                     |
+| Mekanism Tools        | False     | No                        |
 | ComputerCraft:Tweaked | True      | Required                  |
 | Just Enough Items     | False     | Normal                    |
 | Curios API            | True      | Required                  |
