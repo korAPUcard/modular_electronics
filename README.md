@@ -1,7 +1,7 @@
 # Modular Electronics
-### Minecraft MOD Project #8
+### Minecraft Mod Project #8
 
-**MOD Version**: 0.1.0 *(Still in development. When it's done, maybe mod versions changed or not.)*   
+**Mod Version**: 0.1.0 *(Still in development. When it's done, maybe mod versions changed or not.)*   
 **NOTE**: **NOT** released yet.
 
 **Author**: KOR_APUcard
@@ -13,9 +13,11 @@
 -----
 
 ### Description
-This MOD will add variable portable devices and stationary machines.   
-Most devices will require the power. Commonly used Forge Energy(FE). but mostly used Joules(Mekanism).   
-This mod works based on Mekanism and CC.
+This mod will add variant portable devices and stationary machines like smartphone, laptop, desktop computer, etc.   
+And of course you can have your own modular electronics. And it will even come with a GUI-based OS that works well.
+
+All devices will require the power. Commonly used Forge Energy(FE).   
+This mod will works based on Mekanism and CC.
 
 **It's still in development.**
 
@@ -23,12 +25,17 @@ This mod works based on Mekanism and CC.
 
 ### Currently development in Minecraft version
 
-| MC version | Status                  |
-|------------|-------------------------|
-| 1.19       | ***Planning***          |
-| 1.18       | **Working in progress** |
-| ~~1.17~~   | Skipped                 |
-| ~~1.16~~   | Skipped                 |
+| MC version | Status                  | Reason                             |
+|------------|-------------------------|------------------------------------|
+| 1.20       | ***Planning***          | Remake all resources               |
+| 1.19       | *Plan canceled*         | That "major hacking accident".     |
+| 1.18       | **Long-term Delayed**   | Same. Checking for malware hacking |
+| ~~1.17~~   | Skipped                 | - |
+| ~~1.16~~   | Skipped                 | - |
+
+I don't know whether my repository has been hacked, but development has been temporarily suspended to prevent any secondary damage.
+
+If development is resumed, any previous versions under development may be discarded.
 
 -----
 
@@ -37,19 +44,28 @@ This mod works based on Mekanism and CC.
 | Mod name              | Mandatory | Recommendations           |
 |-----------------------|-----------|---------------------------|
 | Mekanism              | True      | Required                  |
-| Mekanism Generators   | False     | Yes                       |
+| Mekanism Generators   | True      | Required                  |
 | Mekanism Additional   | True      | Required                  |
-| Mekanism Tools        | False     | No                        |
+| Mekanism Tools        | False     | Optional                  |
 | ComputerCraft:Tweaked | True      | Required                  |
-| Just Enough Items     | False     | Normal                    |
+| Just Enough Items     | False     | Recommanded               |
 | Curios API            | True      | Required                  |
-| OpenComputers         | Null      | TBA(When they release it) |
-| Project:Red           | Null      | TBA(When they release it) |
+| Project:Red           | False     | TBA(When they release it) |
+| ... | - | - |
 
-**NOTE**   
-If the OC is updated for newer Minecraft version, I would like to support it, but considering there is no news of the OC update, it probably won't happen.
+As you know, OpenComputer is already dead. I know too. So I decided not to wait any longer.   
+I think I've seen other people talk about making a spiritual successor to OC, but even that is dead.
+
+So I decided not to wait any longer for the OC and just create a separate computing mod. However, this mod will be made GUI-based rather than CLI-based so that even beginners can use it easily.   
+Although I have declared CC:Tweaked as a dependency for now, this will probably become optional rather than a dependency in the future.
+
+Currently recruiting development staff. I mostly work alone, but I also consider teamwork where possible.
 
 -----
+
+### Comments
+
+The reason this mod have Mekanism as a dependency is because the code for the power system is written based on Mekanism. In addition, modular upgrades and other features are also dependent on Mekanism because they are part of it. In other words, you can think of it as a kind of fan-made add-on.
 
 **[Become a Patron!](https://www.patreon.com/bePatron?u=21981324)**   
 The mod itself is free, but if you like the mod project and would like to see continuous development, please help me by sponsoring or supporting me to keep this project going.
