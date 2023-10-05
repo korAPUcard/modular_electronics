@@ -25,8 +25,9 @@ This mod works based on Mekanism and CC.
 
 | MC version | Status                  |
 |------------|-------------------------|
-| 1.19       | ***Planning***          |
-| 1.18       | **Working in progress** |
+| 1.20       | ***Planning***          |
+| 1.19       | *Plan canceled*         |
+| 1.18       | **Long-term Delayed**   |
 | ~~1.17~~   | Skipped                 |
 | ~~1.16~~   | Skipped                 |
 
