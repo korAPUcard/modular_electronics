@@ -35,7 +35,7 @@ This mod will works based on Mekanism and CC.
 
 The reason why the 1.18.x and 1.19.x has been stopped to development forever, because I have changed my computer to new and most old repositories has been corrupted during data transfer.   
 I had tried to fix this problem, but keeps failed. So I decided to focuses creates new one.   
-But it's not related to that major hacking accident. All sources safe.
+But it's not related to that Curseforge major hacking accident. All sources safe.
 
 -----
 
