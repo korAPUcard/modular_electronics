@@ -25,17 +25,17 @@ This mod will works based on Mekanism and CC.
 
 ### Currently development in Minecraft version
 
-| MC version | Status                  | Reason                             |
-|------------|-------------------------|------------------------------------|
-| 1.20       | ***Planning***          | Remake all resources               |
-| 1.19       | *Plan canceled*         | That "major hacking accident".     |
-| 1.18       | **Long-term Delayed**   | Same. Checking for malware hacking |
+| MC version | Status                  | Reason                                         |
+|------------|-------------------------|------------------------------------------------|
+| 1.20       | Work in progress        | Recreating all the sources.                    |
+| ~~1.19~~   | Canceled                | Fully canceled. Repository has been corrupted. |
+| ~~1.18~~   | Canceled                | Fully canceled. Repository has been corrupted. |
 | ~~1.17~~   | Skipped                 | - |
 | ~~1.16~~   | Skipped                 | - |
 
-I don't know whether my repository has been hacked, but development has been temporarily suspended to prevent any secondary damage.
-
-If development is resumed, any previous versions under development may be discarded.
+The reason why the 1.18.x and 1.19.x has been stopped to development forever, because I have changed my computer to new and most old repositories has been corrupted during data transfer.   
+I had tried to fix this problem, but keeps failed. So I decided to focuses creates new one.   
+But it's not related to that major hacking accident. All sources safe.
 
 -----
 
