@@ -8,7 +8,7 @@
 
 **Number of team members**: Single *(Currently no member)*   
 **NOTE**: You can request to join the team at any time.   
-**[You can request here](https://forms.gle/7j4mHkNg7Kyhdz5U8)**
+~~**[You can request here](https://forms.gle/7j4mHkNg7Kyhdz5U8)**~~ Deprecated method. Please contact to <apuc_sw@kakao.com> if you want to join to my team.
 
 -----
 
@@ -49,17 +49,17 @@ But it's not related to that Curseforge major hacking accident. All sources safe
 
 ### Mod dependencies
 
-| Mod name              | Mandatory | Recommendations           |
-|-----------------------|-----------|---------------------------|
-| Mekanism              | True      | Required                  |
-| Mekanism Generators   | True      | Required                  |
-| Mekanism Additional   | True      | Required                  |
-| Mekanism Tools        | False     | Optional                  |
-| ComputerCraft:Tweaked | False     | Optional                  |
-| Just Enough Items     | False     | Recommanded               |
-| Curios API            | True      | Required                  |
-| Project:Red           | False     | TBA(When they release it) |
-| ... | - | - |
+| Mod name              | Mandatory | Recommendations |
+|-----------------------|-----------|-----------------|
+| Mekanism              | True      | Required        |
+| Mekanism Generators   | True      | Required        |
+| Mekanism Additional   | True      | Required        |
+| Mekanism Tools        | False     | Optional        |
+| ComputerCraft:Tweaked | False     | Optional        |
+| Just Enough Items     | False     | Recommended     |
+| Curios API            | True      | Required        |
+| More Red              | False     | Recommended     |
+| ...                   | -         | -               |
 
 As you know, OpenComputer is already dead. I know too. So I decided not to wait any longer.   
 I think I've seen other people talk about making a spiritual successor to OC, but even that is dead.

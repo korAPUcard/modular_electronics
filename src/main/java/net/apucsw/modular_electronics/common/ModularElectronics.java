@@ -1,8 +1,9 @@
-package net.apucsw.modular_electronics;
+package net.apucsw.modular_electronics.common;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -124,5 +125,9 @@ public class ModularElectronics
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
+    }
+
+    public static ResourceLocation rl(String path) {
+        return new ResourceLocation(ModularElectronics.MODID, path);
     }
 }
