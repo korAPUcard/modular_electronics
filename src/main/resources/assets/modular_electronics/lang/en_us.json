@@ -1,0 +1,9 @@
+{
+  "itemGroup.modular_electronics": "Modular Electronics",
+  "block.modular_electronics.computing_block": "Computing Block",
+  "item.modular_electronics.smartphone": "Smartphone",
+  "item.modular_electronics.tablet_pc": "Tablet PC",
+  "item.modular_electronics.laptop": "Laptop",
+  "block.examplemod.example_block": "Example Block",
+  "item.examplemod.example_item": "Example Item"
+}
