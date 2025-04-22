@@ -1,0 +1,14 @@
+{
+  "tile.machine.electrical_explosion": {
+    "attenuation_distance": 250,
+    "sounds": [
+      { "name": "modular_electronics:tile/electrical_explosion1" },
+      { "name": "modular_electronics:tile/electrical_explosion2" },
+      { "name": "modular_electronics:tile/electrical_explosion3" },
+      { "name": "modular_electronics:tile/electrical_explosion4" },
+      { "name": "modular_electronics:tile/electrical_explosion5" },
+      { "name": "modular_electronics:tile/electrical_explosion6" }
+    ],
+    "subtitle": "sound_event.modular_electronics.tile.machine.electrical_explosion"
+  }
+}

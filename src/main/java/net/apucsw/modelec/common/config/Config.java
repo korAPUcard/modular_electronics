@@ -1,9 +1,10 @@
-package net.apucsw.modelec;
+package net.apucsw.modelec.common.config;
 
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import net.apucsw.modelec.common.ModularElectronics;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
