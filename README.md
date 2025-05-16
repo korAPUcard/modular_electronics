@@ -16,7 +16,7 @@ Of course if you want to use decorates your house interior, don't be shy. It's g
 If you make some customization to computing devices, you can easily programming. All devices using GUI-based OS.
 
 All devices require the power. Commonly used Joules from Mekanism.   
-This mod is based on Mekanism. CC:Tweaked is not an option. Modular Electronics is a standalone computing mod.   
+This mod is based on Mekanism. CC:Tweaked is not required. Modular Electronics is a standalone computing mod.   
 (CC:Tweaked(ComputerCraft) and OpenComputer is CLI-based, but Modular Electronics is GUI-based.)
 
 -----
