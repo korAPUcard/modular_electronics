@@ -11,7 +11,6 @@ import mekanism.common.Mekanism;
 import mekanism.common.MekanismLang;
 import mekanism.common.content.gear.IRadialModuleContainerItem;
 import mekanism.common.content.gear.ModuleHelper;
-import mekanism.common.item.ItemConfigurator;
 import mekanism.common.item.ItemEnergized;
 import mekanism.common.util.StorageUtils;
 import net.apucsw.modelec.api.ModularElectronicsAbilities;
