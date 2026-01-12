@@ -1,6 +1,8 @@
 {
   "pack": {
-    "description": "${mod_id} resources",
+    "description": {
+      "text": "Essential resources for Modular Electronics mod."
+    },
     "pack_format": 15
   }
 }

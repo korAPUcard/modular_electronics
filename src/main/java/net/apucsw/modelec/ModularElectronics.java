@@ -1,9 +1,8 @@
-package net.apucsw.modular_electronics.common;
+package net.apucsw.modelec;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,7 +18,6 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -31,11 +29,11 @@ import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(ModularElectronics.MODID)
+@Mod(ExampleMod.MODID)
 public class ModularElectronics
 {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "modular_electronics";
+    public static final String MODID = "modelec";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
@@ -55,16 +53,16 @@ public class ModularElectronics
             .alwaysEat().nutrition(1).saturationMod(2f).build())));
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
-    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("modelec_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
             }).build());
 
-    public ModularElectronics()
+    public ExampleMod(FMLJavaModLoadingContext context)
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = context.getModEventBus();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -83,16 +81,16 @@ public class ModularElectronics
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+        LOGGER.info("INITIATING MODULAR ELECTRONICS MODDING SYSTEM...");
 
-        if (Config.logDirtBlock)
-            LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+//        if (Config.logDirtBlock)
+//            LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
 
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
@@ -111,7 +109,7 @@ public class ModularElectronics
     public void onServerStarting(ServerStartingEvent event)
     {
         // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        LOGGER.info("INITIATING MODULAR ELECTRONICS MODDING SYSTEM... IN SERVER...");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -125,9 +123,5 @@ public class ModularElectronics
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
-    }
-
-    public static ResourceLocation rl(String path) {
-        return new ResourceLocation(ModularElectronics.MODID, path);
     }
 }

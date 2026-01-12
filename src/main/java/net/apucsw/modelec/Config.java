@@ -1,4 +1,4 @@
-package net.apucsw.modular_electronics.common;
+package net.apucsw.modelec;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -38,7 +39,7 @@ public class Config
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
-    public static boolean logDirtBlock;
+//    public static boolean logDirtBlock;
     public static int magicNumber;
     public static String magicNumberIntroduction;
     public static Set<Item> items;
