@@ -19,6 +19,8 @@ If you make some customization to computing devices, you can easily programming.
 #### ATTENTION: THIS IS A PROTOTYPE MOD
 For now, programmable devices won't be added to the mod in the alpha version within the 0.x realm. They involve such a large-scale feature that I couldn't write them all myself. Since this mod requires the built-in VM to be GUI-based, not CLI-based, I can't directly leverage CC:Tweaked's API and would have to build my own system from scratch, without the need for an external mod. Therefore, I've decided that further research is necessary, and "programmable devices" will be added starting with the 1.x version.
 
+**DECLARE FOR 1.21.1**: Mod builds for 1.21.1 will be ported after mod builds for 1.20.1 are released first.
+
 -----
 
 ### Currently development in Minecraft version
