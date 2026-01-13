@@ -1,10 +1,10 @@
 # Modular Electronics
 ### Minecraft Mod Project #8
 
-**Mod Version**: 0.1.0 (Work in Progress)
+**Mod Version**: 0.1.0 (Work in Progress)   
 **Mod Status**: Work in progress, Not released yet
 
-**Mod Author**: APUcard
+**Mod Author**: APUcard   
 **Team scale**: Single (Not a team)
 
 -----
@@ -23,15 +23,17 @@ For now, programmable devices won't be added to the mod in the alpha version wit
 
 ### Currently development in Minecraft version
 
-| MC version | Status                           |
-|------------|----------------------------------|
-| 1.21.11    | _NO PLAN (WILL NOT BE RELEASED)_ |
-| 1.21.1     | Work in progress                 |
-| **1.20.1** | **Work in progress**             |
-| ~~1.19.x~~ | _NO PLAN (WILL NOT BE RELEASED)_ |
-| ~~1.18.x~~ | _NO PLAN (WILL NOT BE RELEASED)_ |
-| ~~1.17.x~~ | _NO PLAN (WILL NOT BE RELEASED)_ |
-| ~~1.16.x~~ | _NO PLAN (WILL NOT BE RELEASED)_ |
+| MC version           | Status                           |
+|----------------------|----------------------------------|
+| ~~[HIGHER VERSION]~~ | _NO PLAN (WILL NOT BE RELEASED)_ |
+| ~~1.21.11~~          | _NO PLAN (WILL NOT BE RELEASED)_ |
+| 1.21.1               | Work in progress                 |
+| **1.20.1**           | **Work in progress**             |
+| ~~1.19.x~~           | _NO PLAN (WILL NOT BE RELEASED)_ |
+| ~~1.18.x~~           | _NO PLAN (WILL NOT BE RELEASED)_ |
+| ~~1.17.x~~           | _NO PLAN (WILL NOT BE RELEASED)_ |
+| ~~1.16.x~~           | _NO PLAN (WILL NOT BE RELEASED)_ |
+| ~~[LOWER VERSION]~~  | _NO PLAN (WILL NOT BE RELEASED)_ |
 
 I will not backport this mod to old MC version.
 
