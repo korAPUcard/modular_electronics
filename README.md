@@ -33,7 +33,7 @@ For now, programmable devices won't be added to the mod in the alpha version wit
 | ~~1.17.x~~ | _NO PLAN (WILL NOT BE RELEASED)_ |
 | ~~1.16.x~~ | _NO PLAN (WILL NOT BE RELEASED)_ |
 
-I will not be backported to old version.
+I will not backport this mod to old MC version.
 
 -----
 
